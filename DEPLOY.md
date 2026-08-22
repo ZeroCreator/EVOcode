@@ -1,4 +1,4 @@
-# Развёртывание EVOcode landing
+# Развёртывание EVO code landing
 
 ## Быстрый старт
 
