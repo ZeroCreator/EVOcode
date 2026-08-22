@@ -9,7 +9,5 @@ services:
     ports:
       - "80:80"
     restart: unless-stopped
-    # Для HTTPS раскомментируйте volumes и добавьте certbot
-    # volumes:
-    #   - ./certbot/conf:/etc/letsencrypt
-    #   - ./certbot/www:/var/www/certbot
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro

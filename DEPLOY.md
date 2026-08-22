@@ -6,7 +6,7 @@
 
 ```bash
 # 1. Загрузить проект на сервер
-cd /opt/evocode
+cd /EVOcode
 
 # 2. Собрать и запустить
 docker compose up -d --build
@@ -26,7 +26,7 @@ docker compose up -d --build    # пересобрать после измене
 ## Обновление сайта
 
 ```bash
-cd /opt/evocode
+cd /EVOcode
 git pull origin main   # или загрузить новые файлы
 docker compose up -d --build
 ```

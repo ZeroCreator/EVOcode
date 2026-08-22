@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://evo-code.ru',
+  site: 'https://evocode.zerocreator.ru',
   output: 'static',
   compressHTML: true,
   build: {
