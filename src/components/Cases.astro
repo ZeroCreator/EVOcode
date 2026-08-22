@@ -1,0 +1,83 @@
+---
+const cases = [
+  {
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+      <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+    </svg>`,
+    need: 'Собирать цены конкурентов и видеть их динамику',
+    do: 'Напишем парсеры любых сайтов, привяжем к вашему справочнику 1С и выстроим историю.',
+    get: 'Актуальные данные каждый день. Решения по ценам — не вслепую.'
+  },
+  {
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="2" y="3" width="20" height="14" rx="2"/>
+      <path d="M8 21h8"/>
+      <path d="M12 17v4"/>
+    </svg>`,
+    need: 'Автоматизировать загрузку товаров на маркетплейсы',
+    do: 'Создадим карточки товаров, настроим расчёт цен под условия площадок.',
+    get: 'Сотрудники перестанут тратить часы на ручной ввод. Ошибки исчезнут.'
+  },
+  {
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 2v20"/>
+      <path d="M2 12h20"/>
+      <path d="m4.93 4.93 14.14 14.14"/>
+      <path d="m19.07 4.93-14.14 14.14"/>
+    </svg>`,
+    need: 'Рассчитывать цены для B2B с учётом данных поставщиков',
+    do: 'Настроим парсинг поставщиков и подтянем данные прямо в систему расчёта.',
+    get: 'Актуальные цены для оптовиков. Меньше возражений и пересчётов.'
+  },
+  {
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+    </svg>`,
+    need: 'Убрать брак на производстве',
+    do: 'Разработаем алгоритм управления конвейерной линией в реальном времени.',
+    get: 'Снижение отходов. Экономия на материалах.'
+  },
+  {
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M3 3v18h18"/>
+      <path d="m19 9-5 5-4-4-3 3"/>
+    </svg>`,
+    need: 'Видеть бизнес в цифрах на одном экране',
+    do: 'Построим BI-систему с дашбордами под ваши ключевые показатели.',
+    get: 'Решения — в день получения данных, а не через неделю.'
+  },
+  {
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="2" y="2" width="20" height="8" rx="2"/>
+      <rect x="2" y="14" width="20" height="8" rx="2"/>
+      <path d="M6 6h.01"/>
+      <path d="M6 18h.01"/>
+    </svg>`,
+    need: 'Поддерживать инфраструктуру и сервера',
+    do: 'Настроим Linux, виртуалки, почтовики, мониторинг и резервное копирование.',
+    get: 'Работоспособность системы 24/7 без авралов.'
+  }
+];
+---
+
+<section id="cases" class="section cases">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__tag">Кейсы</span>
+      <h2 class="section__title">С чем мы работаем</h2>
+      <p class="section__lead">Если вам нужно...</p>
+    </div>
+
+    <div class="cases__grid">
+      {cases.map((item) => (
+        <article class="case-card reveal">
+          <div class="case-card__icon" set:html={item.icon} />
+          <h3 class="case-card__need">{item.need}</h3>
+          <p class="case-card__do">{item.do}</p>
+          <p class="case-card__get">{item.get}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

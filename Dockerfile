@@ -1,13 +1,19 @@
-# Stage 1: production-ready static server
+# Stage 1: build Astro static site
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+COPY package.json ./
+RUN npm install
+
+COPY . .
+RUN npm run build
+
+# Stage 2: serve with nginx
 FROM nginx:1.25-alpine
 
-# Copy custom nginx config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Copy static assets
-COPY index.html /usr/share/nginx/html/
-COPY css /usr/share/nginx/html/css
-COPY js /usr/share/nginx/html/js
+COPY --from=builder /app/dist /usr/share/nginx/html
 
 EXPOSE 80
 

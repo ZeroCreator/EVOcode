@@ -1,0 +1,18 @@
+{
+  "name": "evo-code-landing",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Лендинг-визитка инженерной команды EVO code на Astro",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^4.14.0"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  }
+}

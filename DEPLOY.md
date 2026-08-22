@@ -1,9 +1,11 @@
 # Развёртывание EVO code landing
 
+Сайт собирается через Astro и раздаётся Nginx в Docker.
+
 ## Быстрый старт
 
 ```bash
-# 1. Клонировать/загрузить проект на сервер
+# 1. Загрузить проект на сервер
 cd /opt/evocode
 
 # 2. Собрать и запустить
@@ -19,6 +21,14 @@ docker compose up -d --build
 docker compose logs -f          # смотреть логи
 docker compose down             # остановить
 docker compose up -d --build    # пересобрать после изменений
+```
+
+## Обновление сайта
+
+```bash
+cd /opt/evocode
+git pull origin main   # или загрузить новые файлы
+docker compose up -d --build
 ```
 
 ## HTTPS (Let's Encrypt)

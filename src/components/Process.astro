@@ -1,0 +1,48 @@
+---
+const steps = [
+  {
+    num: '1',
+    title: 'Вы рассказываете задачу',
+    text: 'Любым удобным способом: звонок, сообщение, встреча.'
+  },
+  {
+    num: '2',
+    title: 'Мы задаём вопросы',
+    text: 'Чтобы понять реальную проблему и не делать лишнего.'
+  },
+  {
+    num: '3',
+    title: 'Предлагаем решение и цену',
+    text: 'Без технического жаргона, понятными словами.'
+  },
+  {
+    num: '4',
+    title: 'Делаем поэтапно',
+    text: 'С промежуточными показами и обратной связью.'
+  },
+  {
+    num: '5',
+    title: 'Передаём и сопровождаем',
+    text: 'Пока система не заработает как надо.'
+  }
+];
+---
+
+<section id="process" class="section process">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__tag">Процесс</span>
+      <h2 class="section__title">Как мы работаем</h2>
+      <p class="section__lead">Без технического жаргона, поэтапно, с промежуточными показами.</p>
+    </div>
+    <div class="process__timeline">
+      {steps.map((step) => (
+        <div class="process__step reveal">
+          <span class="process__num">{step.num}</span>
+          <h3>{step.title}</h3>
+          <p>{step.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

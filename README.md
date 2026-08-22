@@ -2,53 +2,61 @@
 
 Современный одностраничный сайт для группы разработчиков, которая решает нестандартные задачи: парсинг, интеграции, BI, алгоритмы для производства, DevOps и администрирование Linux.
 
-## Демо
-
-Откройте `index.html` в браузере или разверните через Docker.
+Собран на [Astro](https://astro.build/).
 
 ## Стек
 
-- HTML5
-- CSS3 (Flexbox / Grid, анимации, адаптив)
-- Vanilla JavaScript (Intersection Observer, typing-эффект)
+- [Astro](https://astro.build/) — статический сайт-билдер
+- HTML5 / CSS3 / Vanilla JS
 - Nginx + Docker
 
 ## Структура
 
 ```
 .
-├── index.html          # Главная страница
-├── css/
-│   └── style.css       # Стили
-├── js/
-│   └── main.js         # Скрипты
-├── Dockerfile          # Сборка контейнера
-├── docker-compose.yml  # Запуск на сервере
-├── nginx.conf          # Конфиг Nginx
-├── .dockerignore       # Исключения для Docker
-├── DEPLOY.md           # Инструкция по развёртыванию
-└── README.md           # Этот файл
+├── src/
+│   ├── components/     # UI-блоки (Hero, Cases, Contacts и т.д.)
+│   ├── layouts/        # Базовый Layout
+│   ├── pages/          # Страницы
+│   ├── scripts/        # Клиентские скрипты
+│   └── styles/         # Глобальные стили
+├── public/             # Статические файлы
+├── Dockerfile
+├── docker-compose.yml
+├── nginx.conf
+├── astro.config.mjs
+├── package.json
+└── README.md
 ```
 
-## Локальный запуск
+## Локальная разработка
+
+Требуется Node.js >= 18.17.
 
 ```bash
-# Просто открыть файл
-open index.html
-
-# Или поднять локальный сервер
-python3 -m http.server 8080
+npm install
+npm run dev
 ```
 
-## Запуск в Docker
+Сайт будет доступен по адресу `http://localhost:4321`.
+
+## Сборка
+
+```bash
+npm run build
+```
+
+Результат сборки попадает в папку `dist/`.
+
+## Развёртывание через Docker
 
 ```bash
 docker compose up -d --build
 ```
 
-Сайт будет доступен по адресу `http://localhost` (или IP сервера).
+Контейнер поднимается на порту `80`.
 
-Подробнее про HTTPS и продакшен-развёртывание — в [`DEPLOY.md`](DEPLOY.md).
+Подробнее про продакшен, HTTPS и обновления — в [`DEPLOY.md`](DEPLOY.md).
 
 ## Что можно доработать
 

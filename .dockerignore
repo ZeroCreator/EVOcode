@@ -1,6 +1,10 @@
-# Git
 .git
 .gitignore
+
+# Astro
+node_modules
+dist
+.astro
 
 # Docker
 Dockerfile
@@ -19,7 +23,7 @@ README.md
 DEPLOY.md
 *.md
 
-# Misc
-node_modules
-npm-debug.log
-yarn-error.log
+# Logs
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
