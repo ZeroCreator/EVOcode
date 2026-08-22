@@ -1,0 +1,25 @@
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# IDE / OS
+.vscode
+.idea
+*.swp
+*.swo
+.DS_Store
+
+# Docs
+README.md
+DEPLOY.md
+*.md
+
+# Misc
+node_modules
+npm-debug.log
+yarn-error.log
