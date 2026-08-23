@@ -1,11 +1,11 @@
 version: "3.8"
 
 services:
-  evocode:
+  evoxide:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: evocode-landing
+    container_name: evoxide-landing
     ports:
       - "80:80"
       - "443:443"

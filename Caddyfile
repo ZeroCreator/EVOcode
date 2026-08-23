@@ -1,4 +1,4 @@
-evocode.zerocreator.ru {
+evoxide.com {
     root * /usr/share/caddy
     file_server
     try_files {path} {path}/ /index.html
@@ -10,4 +10,8 @@ evocode.zerocreator.ru {
         X-Content-Type-Options "nosniff"
         Referrer-Policy "strict-origin-when-cross-origin"
     }
+}
+
+evoxide.ru {
+    redir https://evoxide.com{uri} permanent
 }

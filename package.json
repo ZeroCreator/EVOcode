@@ -1,8 +1,8 @@
 {
-  "name": "evo-code-landing",
+  "name": "evoxide-landing",
   "type": "module",
   "version": "1.0.0",
-  "description": "Лендинг-визитка инженерной команды EVO code на Astro",
+  "description": "Лендинг-визитка инженерной команды evoxide на Astro",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

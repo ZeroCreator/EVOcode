@@ -1,12 +1,12 @@
-# Развёртывание EVO code landing
+# Развёртывание evoxide-landing
 
-Сайт собирается через Astro и раздаётся Nginx в Docker.
+Сайт собирается через Astro и раздаётся Caddy в Docker.
 
 ## Быстрый старт
 
 ```bash
 # 1. Загрузить проект на сервер
-cd /EVOcode
+cd /evoxide
 
 # 2. Собрать и запустить
 docker compose up -d --build
@@ -26,7 +26,7 @@ docker compose up -d --build    # пересобрать после измене
 ## Обновление сайта
 
 ```bash
-cd /EVOcode
+cd /evoxide
 git pull origin main   # или загрузить новые файлы
 docker compose up -d --build
 ```
@@ -34,18 +34,18 @@ docker compose up -d --build
 ## HTTPS (Let's Encrypt)
 
 1. В `docker-compose.yml` раскомментируйте блок `volumes`.
-2. Замените `server_name _;` в `nginx.conf` на свой домен.
+2. Замените домен в `Caddyfile` при необходимости.
 3. Выпустите сертификат:
 
 ```bash
 docker run -it --rm \
-  -v /opt/evocode/certbot/conf:/etc/letsencrypt \
-  -v /opt/evocode/certbot/www:/var/www/certbot \
+  -v /opt/evoxide/certbot/conf:/etc/letsencrypt \
+  -v /opt/evoxide/certbot/www:/var/www/certbot \
   -p 80:80 \
   certbot/certbot certonly --standalone -d ваш.домен
 ```
 
-4. Обновите `nginx.conf` для 443 порта и перезапустите:
+4. Обновите `Caddyfile` для 443 порта и перезапустите:
 
 ```bash
 docker compose restart
