@@ -1,0 +1,30 @@
+---
+const products = [
+  {
+    name: 'YouParse',
+    desc: 'Автоматизированный сбор информации в интернете'
+  },
+  {
+    name: 'Isolarium',
+    desc: 'Платформа для запуска приложений в изолированных средах'
+  }
+];
+---
+
+<section id="products" class="section products">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__tag">Собственные продукты</span>
+      <h2 class="section__title">Решения, которые мы развиваем</h2>
+    </div>
+
+    <div class="products__grid">
+      {products.map((item) => (
+        <div class="product-card reveal">
+          <h3>{item.name}</h3>
+          <p>{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
