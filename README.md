@@ -2,51 +2,37 @@
 
 Современный одностраничный сайт для группы разработчиков, которая решает нестандартные задачи: парсинг, интеграции, BI, алгоритмы для производства, DevOps и администрирование Linux.
 
-Собран на [Astro](https://astro.build/).
-
 ## Стек
 
-- [Astro](https://astro.build/) — статический сайт-билдер
 - HTML5 / CSS3 / Vanilla JS
-- Nginx + Docker
+- Caddy + Docker
 
 ## Структура
 
 ```
 .
-├── src/
-│   ├── components/     # UI-блоки (Hero, Cases, Contacts и т.д.)
-│   ├── layouts/        # Базовый Layout
-│   ├── pages/          # Страницы
-│   ├── scripts/        # Клиентские скрипты
-│   └── styles/         # Глобальные стили
-├── public/             # Статические файлы
+├── index.html              # Главная страница
+├── styles.css              # Стили
+├── scripts.js              # Клиентские скрипты
+├── favicon.ico             # Favicon
+├── favicon-16x16.png
+├── favicon-32x32.png
+├── apple-touch-icon.png
+├── Caddyfile               # Конфигурация Caddy
 ├── Dockerfile
 ├── docker-compose.yml
-├── nginx.conf
-├── astro.config.mjs
-├── package.json
 └── README.md
 ```
 
 ## Локальная разработка
 
-Требуется Node.js >= 18.17.
+Откройте `index.html` в браузере или используйте любой статический сервер:
 
 ```bash
-npm install
-npm run dev
+python3 -m http.server 8080
 ```
 
-Сайт будет доступен по адресу `http://localhost:4321`.
-
-## Сборка
-
-```bash
-npm run build
-```
-
-Результат сборки попадает в папку `dist/`.
+Сайт будет доступен по адресу `http://localhost:8080`.
 
 ## Развёртывание через Docker
 

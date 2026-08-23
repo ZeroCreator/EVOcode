@@ -1,6 +1,6 @@
 # Развёртывание evoxide-landing
 
-Сайт собирается через Astro и раздаётся Caddy в Docker.
+Сайт — статический HTML/CSS/JS, раздаётся Caddy в Docker.
 
 ## Быстрый старт
 
@@ -33,9 +33,8 @@ docker compose up -d --build
 
 ## HTTPS (Let's Encrypt)
 
-1. В `docker-compose.yml` раскомментируйте блок `volumes`.
-2. Замените домен в `Caddyfile` при необходимости.
-3. Выпустите сертификат:
+1. Замените домен в `Caddyfile` при необходимости.
+2. Выпустите сертификат:
 
 ```bash
 docker run -it --rm \
@@ -45,7 +44,7 @@ docker run -it --rm \
   certbot/certbot certonly --standalone -d ваш.домен
 ```
 
-4. Обновите `Caddyfile` для 443 порта и перезапустите:
+3. Обновите `Caddyfile` для 443 порта и перезапустите:
 
 ```bash
 docker compose restart
