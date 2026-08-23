@@ -9,12 +9,12 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-# Stage 2: serve with nginx
-FROM nginx:1.25-alpine
+# Stage 2: serve with Caddy
+FROM caddy:2-alpine
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY Caddyfile /etc/caddy/Caddyfile
+COPY --from=builder /app/dist /usr/share/caddy
 
-EXPOSE 80
+EXPOSE 80 443
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]

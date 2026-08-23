@@ -8,6 +8,12 @@ services:
     container_name: evocode-landing
     ports:
       - "80:80"
+      - "443:443"
     restart: unless-stopped
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - caddy-data:/data
+      - caddy-config:/config
+
+volumes:
+  caddy-data:
+  caddy-config:
