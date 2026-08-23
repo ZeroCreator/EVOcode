@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const parent = entry.target.closest('.cases__grid, .clients__grid, .process__timeline, .stack__grid');
+                const parent = entry.target.closest('.about__stats, .cases__grid, .clients__grid, .real-cases__grid, .products__grid, .process__timeline, .stack__grid');
                 if (parent) {
                     const siblings = Array.from(parent.children).filter(child => child.classList.contains('reveal'));
                     const index = siblings.indexOf(entry.target);

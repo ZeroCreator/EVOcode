@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EVOxide — Инженерная команда для нестандартных бизнес-задач</title>
+    <meta name="description" content="Автоматизация, интеграция, оптимизация — там, где это сложно. Парсинг, микросервисы, BI, DevOps." />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="#" class="logo">
+          <span class="logo__mark">EVO</span> <span class="logo__text">code</span>
+        </a>
+        <nav class="nav">
+          <a href="#about" class="nav__link">О нас</a>
+          <a href="#cases" class="nav__link">С чем работаем</a>
+          <a href="#clients" class="nav__link">Кому подходит</a>
+          <a href="#real-cases" class="nav__link">Кейсы</a>
+          <a href="#products" class="nav__link">Продукты</a>
+          <a href="#process" class="nav__link">Как работаем</a>
+          <a href="#stack" class="nav__link">Компетенции</a>
+          <a href="#contacts" class="nav__link nav__link--cta">Контакты</a>
+        </nav>
+        <button class="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero__bg">
+        <div class="orb orb--1"></div>
+        <div class="orb orb--2"></div>
+        <div class="orb orb--3"></div>
+      </div>
+      <div class="container hero__content">
+        <p class="hero__label reveal">Инженерная команда</p>
+        <h1 class="hero__title reveal">
+          <span class="type-text" data-text="Автоматизация, интеграция, оптимизация — там, где это сложно"></span>
+          <span class="cursor">|</span>
+        </h1>
+        <p class="hero__subtitle reveal">
+          Парсинг, микросервисы, BI, алгоритмы для производства и DevOps под ключ.
+          Решаем задачи, которые не берут типовые подрядчики.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#contacts" class="btn btn--primary">Обсудить задачу</a>
+          <a href="#cases" class="btn btn--ghost">Смотреть кейсы</a>
+        </div>
+      </div>
+      <div class="hero__scroll">
+        <span></span>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">О нас</span>
+          <h2 class="section__title">Инженерная команда для сложных задач</h2>
+          <p class="section__lead">
+            Решаем то, что не берут типовые подрядчики: парсинг, интеграции, алгоритмы, DevOps и ИИ под ключ.
+          </p>
+        </div>
+
+        <div class="about__stats">
+          <div class="stat-card reveal">
+            <span class="stat-card__num">5+</span>
+            <span class="stat-card__label">лет опыта</span>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-card__num">10+</span>
+            <span class="stat-card__label">крупных клиентов</span>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-card__num">30+</span>
+            <span class="stat-card__label">отдельных проектов</span>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-card__num">2</span>
+            <span class="stat-card__label">реестровых продукта</span>
+          </div>
+        </div>
+
+        <div class="about__directions reveal">
+          <h3>Наши направления</h3>
+          <div class="directions__list">
+            <span class="direction-tag">WEB разработка</span>
+            <span class="direction-tag">DevOps</span>
+            <span class="direction-tag">Всё, что связано с ИИ</span>
+            <span class="direction-tag">Системное администрирование</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases" class="section cases">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Кейсы</span>
+          <h2 class="section__title">С чем мы работаем</h2>
+          <p class="section__lead">Если вам нужно...</p>
+        </div>
+
+        <div class="cases__grid">
+          <article class="case-card reveal">
+            <div class="case-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+              </svg>
+            </div>
+            <h3 class="case-card__need">Собирать цены конкурентов и видеть их динамику</h3>
+            <p class="case-card__do">Напишем парсеры любых сайтов, привяжем к вашему справочнику 1С и выстроим историю.</p>
+            <p class="case-card__get">Актуальные данные каждый день. Решения по ценам — не вслепую.</p>
+          </article>
+
+          <article class="case-card reveal">
+            <div class="case-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8"/>
+                <path d="M12 17v4"/>
+              </svg>
+            </div>
+            <h3 class="case-card__need">Автоматизировать загрузку товаров на маркетплейсы</h3>
+            <p class="case-card__do">Создадим карточки товаров, настроим расчёт цен под условия площадок.</p>
+            <p class="case-card__get">Сотрудники перестанут тратить часы на ручной ввод. Ошибки исчезнут.</p>
+          </article>
+
+          <article class="case-card reveal">
+            <div class="case-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20"/>
+                <path d="M2 12h20"/>
+                <path d="m4.93 4.93 14.14 14.14"/>
+                <path d="m19.07 4.93-14.14 14.14"/>
+              </svg>
+            </div>
+            <h3 class="case-card__need">Рассчитывать цены для B2B с учётом данных поставщиков</h3>
+            <p class="case-card__do">Настроим парсинг поставщиков и подтянем данные прямо в систему расчёта.</p>
+            <p class="case-card__get">Актуальные цены для оптовиков. Меньше возражений и пересчётов.</p>
+          </article>
+
+          <article class="case-card reveal">
+            <div class="case-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <h3 class="case-card__need">Убрать брак на производстве</h3>
+            <p class="case-card__do">Разработаем алгоритм управления конвейерной линией в реальном времени.</p>
+            <p class="case-card__get">Снижение отходов. Экономия на материалах.</p>
+          </article>
+
+          <article class="case-card reveal">
+            <div class="case-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 3v18h18"/>
+                <path d="m19 9-5 5-4-4-3 3"/>
+              </svg>
+            </div>
+            <h3 class="case-card__need">Видеть бизнес в цифрах на одном экране</h3>
+            <p class="case-card__do">Построим BI-систему с дашбордами под ваши ключевые показатели.</p>
+            <p class="case-card__get">Решения — в день получения данных, а не через неделю.</p>
+          </article>
+
+          <article class="case-card reveal">
+            <div class="case-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="8" rx="2"/>
+                <rect x="2" y="14" width="20" height="8" rx="2"/>
+                <path d="M6 6h.01"/>
+                <path d="M6 18h.01"/>
+              </svg>
+            </div>
+            <h3 class="case-card__need">Поддерживать инфраструктуру и сервера</h3>
+            <p class="case-card__do">Настроим Linux, виртуалки, почтовики, мониторинг и резервное копирование.</p>
+            <p class="case-card__get">Работоспособность системы 24/7 без авралов.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="clients" class="section clients">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Клиенты</span>
+          <h2 class="section__title">Кому это подходит</h2>
+        </div>
+        <div class="clients__grid">
+          <div class="client-card reveal">
+            <span class="client-card__num">01</span>
+            <h3>Производственные компании</h3>
+            <p>Которые хотят снизить брак и оптимизировать процессы.</p>
+          </div>
+          <div class="client-card reveal">
+            <span class="client-card__num">02</span>
+            <h3>Ритейл и дистрибьюторы</h3>
+            <p>Которым нужны данные конкурентов и автоматизация ценообразования.</p>
+          </div>
+          <div class="client-card reveal">
+            <span class="client-card__num">03</span>
+            <h3>Компании с B2B-системами</h3>
+            <p>Где цены зависят от поставщиков и рыночной ситуации.</p>
+          </div>
+          <div class="client-card reveal">
+            <span class="client-card__num">04</span>
+            <h3>Бизнесы, которые выросли из Excel</h3>
+            <p>И хотят видеть дашборды в реальном времени.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="real-cases" class="section real-cases">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Клиенты</span>
+          <h2 class="section__title">Реальные кейсы внешних клиентов</h2>
+          <p class="section__lead">Задачи, которые мы уже решили лично.</p>
+        </div>
+
+        <div class="real-cases__grid">
+          <div class="real-case-card reveal"><span class="real-case-card__num">01</span><p>Внутренний service desk для Lanta Service</p></div>
+          <div class="real-case-card reveal"><span class="real-case-card__num">02</span><p>Поддержка интернет-магазина korallmicro.ru</p></div>
+          <div class="real-case-card reveal"><span class="real-case-card__num">03</span><p>Мониторинг 1 000 000+ цен конкурентов для ГК КМ</p></div>
+          <div class="real-case-card reveal"><span class="real-case-card__num">04</span><p>Мониторинг динамики цен на маркетплейсах для giper.fm</p></div>
+          <div class="real-case-card reveal"><span class="real-case-card__num">05</span><p>Алгоритмы оптимизации производственных линий для Антантис-Пака</p></div>
+          <div class="real-case-card reveal"><span class="real-case-card__num">06</span><p>ИИ-анализ телефонных звонков в ТИМ-73</p></div>
+          <div class="real-case-card reveal"><span class="real-case-card__num">07</span><p>Генерация описаний карточек товаров в ГК КМ</p></div>
+          <div class="real-case-card reveal"><span class="real-case-card__num">08</span><p>Миграция на новый helpdesk для авиакомпании Азимут</p></div>
+          <div class="real-case-card reveal"><span class="real-case-card__num">09</span><p>Сопровождение инфраструктуры ТИМ-73 (почта, виртуальные машины, внутренние платформы)</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section products">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Собственные продукты</span>
+          <h2 class="section__title">Решения, которые мы развиваем</h2>
+        </div>
+
+        <div class="products__grid">
+          <div class="product-card reveal">
+            <h3>YouParse</h3>
+            <p>Автоматизированный сбор информации в интернете</p>
+          </div>
+          <div class="product-card reveal">
+            <h3>Isolarium</h3>
+            <p>Платформа для запуска приложений в изолированных средах</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section process">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Процесс</span>
+          <h2 class="section__title">Как мы работаем</h2>
+          <p class="section__lead">Без технического жаргона, поэтапно, с промежуточными показами.</p>
+        </div>
+        <div class="process__timeline">
+          <div class="process__step reveal">
+            <span class="process__num">1</span>
+            <h3>Вы рассказываете задачу</h3>
+            <p>Любым удобным способом: звонок, сообщение, встреча.</p>
+          </div>
+          <div class="process__step reveal">
+            <span class="process__num">2</span>
+            <h3>Мы задаём вопросы</h3>
+            <p>Чтобы понять реальную проблему и не делать лишнего.</p>
+          </div>
+          <div class="process__step reveal">
+            <span class="process__num">3</span>
+            <h3>Предлагаем решение и цену</h3>
+            <p>Без технического жаргона, понятными словами.</p>
+          </div>
+          <div class="process__step reveal">
+            <span class="process__num">4</span>
+            <h3>Делаем поэтапно</h3>
+            <p>С промежуточными показами и обратной связью.</p>
+          </div>
+          <div class="process__step reveal">
+            <span class="process__num">5</span>
+            <h3>Передаём и сопровождаем</h3>
+            <p>Пока система не заработает как надо.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" class="section stack">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Компетенции</span>
+          <h2 class="section__title">Что у нас в арсенале</h2>
+        </div>
+        <div class="stack__grid">
+          <div class="stack-card reveal">
+            <h3>Парсинг и сбор данных</h3>
+            <p>Любые сайты, защита, обход блокировок, история цен, интеграция с 1С.</p>
+          </div>
+          <div class="stack-card reveal">
+            <h3>Микросервисы и интеграции</h3>
+            <p>API, связка 1С и внешних сервисов, маркетплейсы, B2B-ценообразование.</p>
+          </div>
+          <div class="stack-card reveal">
+            <h3>Алгоритмы и IoT</h3>
+            <p>Управление конвейерами, снижение брака, обработка потоков данных в реальном времени.</p>
+          </div>
+          <div class="stack-card reveal">
+            <h3>BI и дашборды</h3>
+            <p>Агрегация данных, визуализация KPI, быстрые решения на основе фактов.</p>
+          </div>
+          <div class="stack-card reveal">
+            <h3>DevOps и Linux</h3>
+            <p>Серверы, виртуализация, почтовики, CI/CD, мониторинг, резервное копирование.</p>
+          </div>
+          <div class="stack-card reveal">
+            <h3>Сопровождение</h3>
+            <p>Поддержка работоспособности инфраструктуры клиента, доработки и масштабирование.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="section contacts">
+      <div class="container">
+        <div class="contacts__wrap reveal">
+          <div class="contacts__info">
+            <span class="section__tag">Контакты</span>
+            <h2 class="section__title">Обсудить задачу</h2>
+            <p class="contacts__lead">Без звонков и лишних созвонов. Напишите — мы на связи.</p>
+            <ul class="contacts__list">
+              <li>
+                <a href="https://t.me/ваш_ник" target="_blank" rel="noopener">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                  </svg>
+                  <span>Telegram: @ваш_ник</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/79990000000" target="_blank" rel="noopener">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                  <span>WhatsApp: +7 XXX XXX XX-XX</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:ваш@почта.ру">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <path d="m22 6-10 7L2 6"/>
+                  </svg>
+                  <span>Email: ваш@почта.ру</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <form class="contacts__form" action="#" method="post">
+            <h3>Или оставьте заявку</h3>
+            <input type="text" name="name" placeholder="Как к вам обращаться" required />
+            <input type="email" name="email" placeholder="Email или Telegram" required />
+            <textarea name="message" rows="4" placeholder="Кратко опишите задачу" required></textarea>
+            <button type="submit" class="btn btn--primary btn--wide">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span class="logo"><span class="logo__mark">EVO</span><span class="logo__text">xide</span></span>
+        <p>© <span id="year"></span> EVOxide. Инженерные решения для бизнеса.</p>
+      </div>
+    </footer>
+
+    <script src="/scripts.js"></script>
+  </body>
+</html>
