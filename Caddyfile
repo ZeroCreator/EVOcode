@@ -1,4 +1,8 @@
-evoxide.com {
+{
+    auto_https off
+}
+
+:80 {
     root * /usr/share/caddy
     file_server
     try_files {path} {path}/ /index.html
@@ -10,8 +14,4 @@ evoxide.com {
         X-Content-Type-Options "nosniff"
         Referrer-Policy "strict-origin-when-cross-origin"
     }
-}
-
-evoxide.ru {
-    redir https://evoxide.com{uri} permanent
 }
