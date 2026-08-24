@@ -73,6 +73,8 @@ a {
 .logo__img {
     height: 64px;
     width: auto;
+    max-width: 220px;
+    object-fit: contain;
     display: block;
 }
 
@@ -931,6 +933,7 @@ a {
 
     .logo__img {
         height: 72px;
+        max-width: 240px;
     }
 
     .logo__img--footer {
@@ -1021,5 +1024,6 @@ a {
 
     .logo__img {
         height: 80px;
+        max-width: 260px;
     }
 }
