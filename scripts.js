@@ -57,24 +57,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // Typing effect for hero title (one time)
-    const typeContainer = document.querySelector('.type-text');
-    if (typeContainer) {
-        const text = typeContainer.dataset.text;
-        let i = 0;
-        const speed = 40;
+    // Hero console-like typing effect (one time)
+    const heroTitle = document.querySelector('.hero__title');
+    const heroCursor = heroTitle?.querySelector('.hero__cursor');
+    const typingParts = heroTitle
+        ? Array.from(heroTitle.querySelectorAll('[data-text]'))
+        : [];
 
-        function type() {
-            if (i < text.length) {
-                typeContainer.textContent += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            } else {
-                typeContainer.closest('.hero__title')?.classList.add('typing-done');
+    if (heroTitle && heroCursor && typingParts.length) {
+        const typePart = (partIndex = 0, charIndex = 0) => {
+            const part = typingParts[partIndex];
+
+            if (!part) {
+                heroCursor.classList.add('hero__cursor--done');
+                return;
             }
-        }
 
-        setTimeout(type, 600);
+            part.append(heroCursor);
+            const text = part.dataset.text || '';
+
+            if (charIndex < text.length) {
+                part.insertBefore(document.createTextNode(text.charAt(charIndex)), heroCursor);
+                window.setTimeout(() => typePart(partIndex, charIndex + 1), 38);
+            } else {
+                window.setTimeout(() => typePart(partIndex + 1, 0), 120);
+            }
+        };
+
+        window.setTimeout(() => typePart(), 550);
     }
 
     // Form placeholder handler
